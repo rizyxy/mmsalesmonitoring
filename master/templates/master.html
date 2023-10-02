@@ -6,8 +6,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="{% static master.css %}">
-    <link rel="stylesheet" href="{% static sidenav.css %}">
+    <link rel="stylesheet" href="{% static 'master.css' %}">
+    <link rel="stylesheet" href="{% static 'sidenav.css' %}">
+
+    {% block css %}
+    {% endblock %}
 
     <title>{% block title %}{% endblock %}</title>
 </head>
@@ -15,10 +18,10 @@
 
     <div class="grid">
         <div class="sidenav">
-            <a href="" class="{% block home_status}{% endblock %}">Home</a>
-            <a href="" class="{% block products_status}{% endblock %}">Products</a>
-            <a href="" class="{% block shops_status}{% endblock %}">Shops</a>
-            <a href="" class="{% block graphs_status}{% endblock %}">Graphs</a>
+            <a href="">Home</a>
+            <a href="">Products</a>
+            <a href="" >Shops</a>
+            <a href="">Graphs</a>
         </div>
         <!-- Add Content Here -->
         {% block content %}
