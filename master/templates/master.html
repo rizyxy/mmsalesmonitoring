@@ -1,0 +1,29 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{% static master.css %}">
+    <link rel="stylesheet" href="{% static sidenav.css %}">
+
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+
+    <div class="grid">
+        <div class="sidenav">
+            <a href="">Home</a>
+            <a href="">Products</a>
+            <a href="">Shops</a>
+            <a href="">Graphs</a>
+        </div>
+        <!-- Add Content Here -->
+        {% block content %}
+        {% endblock %}
+    </div>
+
+</body>
+</html>
